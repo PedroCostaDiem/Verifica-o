@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planilha Online</title>
+    <!-- Importando a biblioteca Handsontable -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.js"></script>
+</head>
+<body>
+    <h1>Minha Planilha no Navegador</h1>
+    <div id="example"></div>
+
+    <script>
+        var data = [
+            ['', 'Coluna 1', 'Coluna 2', 'Coluna 3'],
+            ['Linha 1', '', '', ''],
+            ['Linha 2', '', '', ''],
+            ['Linha 3', '', '', '']
+        ];
+
+        var container = document.getElementById('example');
+        var hot = new Handsontable(container, {
+            data: data,
+            rowHeaders: true,
+            colHeaders: true,
+            licenseKey: 'non-commercial-and-evaluation'
+        });
+    </script>
+</body>
+</html>
